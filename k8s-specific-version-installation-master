@@ -68,6 +68,10 @@ kubeadm init
 
 kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
 
+#if there is issue for creating a pod then use other network
+#kubectl apply -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
+
+
 
 
 #Error handling for CRI not running
