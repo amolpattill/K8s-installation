@@ -70,4 +70,11 @@ kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/we
 
 
 
+#Error handling for CRI not running
+#rm /etc/containerd/config.toml
+#systemctl restart containerd
+
+
+
+
 
