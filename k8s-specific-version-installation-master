@@ -39,9 +39,9 @@ EOF
 
 #check-Available Versions of kubeadm,kubelet,kubect.
 
-yum -v list kubeadm --show-duplicates
-yum -v list kubectl --show-duplicates
-yum -v list kubelet --show-duplicates
+#yum -v list kubeadm --show-duplicates
+#yum -v list kubectl --show-duplicates
+#yum -v list kubelet --show-duplicates
 
 
 yum install kubelet-1.21.1-0 kubeadm-1.21.1-0 kubectl-1.21.1-0  -y
