@@ -2,6 +2,12 @@
 
 #INSTALLATION OF K8S IN CENTOS 7 VM - PART 2
 
+swapoff -a
+
+sed -i '/swap/d' /etc/fstab
+
+setenforce 0
+
 #Check status of SELinux again. It should be disabled
 sestatus
 
