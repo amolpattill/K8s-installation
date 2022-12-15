@@ -52,6 +52,28 @@ yum -v list kubelet --show-duplicates
 yum install kubelet-1.21.1-0 kubeadm-1.21.1-0 kubectl-1.21.1-0 -y
 systemctl enable --now kubelet
 
+# Run the Command To Initialize Kubernetes master-node
+
+kubeadm init
+
+# Run The Following commands after Initializing Master 
+
+#To start using your cluster, you need to run the following as a regular user:
+
+  #mkdir -p $HOME/.kube
+  #sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  #sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+#Alternatively, if you are the root user, you can run:
+
+#export KUBECONFIG=/etc/kubernetes/admin.conf
+
+# APPLY THE CNI FOR MASTER-NODE COMMUNICATION
+
+kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+
+
+
 #Error handling for CRI not running
 #rm /etc/containerd/config.toml
 #systemctl restart containerd
